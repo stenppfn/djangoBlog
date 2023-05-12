@@ -31,7 +31,7 @@ urlpatterns = [
     path('blog/', include('blog.urls')),
     path('company/', include('company.urls')),
 
-
+    path('register/', include('userregister.urls')),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     # 正则匹配 静态资源
     re_path(r'^favicon\.ico$', views.favicon, name='favicon'),
