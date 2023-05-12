@@ -31,6 +31,7 @@ urlpatterns = [
     path('blog/', include('blog.urls')),
     path('company/', include('company.urls')),
 
+    path('userlogin/', include('userlogin.urls')),
     path('register/', include('userregister.urls')),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     # 正则匹配 静态资源
