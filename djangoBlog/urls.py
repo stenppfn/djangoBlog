@@ -28,12 +28,16 @@ urlpatterns = [
     path('', TemplateView.as_view(template_name='index.html')),
 
     path('admin/', admin.site.urls),
+
+    # 测试+杂项
     path('blog/', include('blog.urls')),
     path('company/', include('company.urls')),
 
+    # 正式项目
     path('userlogin/', include('userlogin.urls')),
     path('register/', include('userregister.urls')),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+
     # 正则匹配 静态资源
     re_path(r'^favicon\.ico$', views.favicon, name='favicon'),
     re_path('^css/.*$', views.css, name='css'),
